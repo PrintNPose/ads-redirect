@@ -2,7 +2,7 @@
 <html lang="tr">
 <head>
   <meta charset="UTF-8">
-  <title>Redirecting</title>
+  <title>Redirecting...</title>
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18469257647"></script>
@@ -11,16 +11,22 @@
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'AW-18469257647');
-  </script>
 
-  <!-- Redirecting -->
-  <script>
+    // Event snippet - dönüşümü bildir
+    gtag('event', 'conversion', {
+      'send_to': 'AW-18469257647/yXXQCJ_pxYQdEK-D6uZE',
+      'event_callback': function () {
+        window.location.href = 'https://www.patreon.com/PrintnPose';
+      }
+    });
+
+    // Etiket 1.5 saniye içinde cevap vermezse yine de yönlendir (güvenlik önlemi)
     setTimeout(function () {
       window.location.href = 'https://www.patreon.com/PrintnPose';
     }, 1500);
   </script>
 </head>
 <body>
-  <p>Redirecting to Patreon...</p>
+  <p>Redirecting...</p>
 </body>
 </html>
